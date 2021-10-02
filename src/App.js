@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Mode } from './components/ChangeTheme';
+import { ChangeMode } from './components/DarkMode';
 
 function App() {
+ const testUrl = process.env.REACT_APP_TEST_URL;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Context url:{testUrl}</h1>
+      <Mode/>
+      <ChangeMode/>
     </div>
   );
 }
